@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
         paddingTop: normalizePaddingSize(10)
     },
     modalTitle: {
-        fontFamily: 'sofia-bold',
+        fontFamily: 'sofiaBold',
         fontSize: 20,
         textAlign: 'center'
     },

@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     titleContainer: {
     },
     title: {
-        fontFamily: 'sofia-bold',
+        fontFamily: 'sofiaBold',
         fontSize: 20,
     },
     arrowConatiner: {

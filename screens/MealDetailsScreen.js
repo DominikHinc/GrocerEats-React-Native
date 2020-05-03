@@ -263,12 +263,12 @@ const styles = StyleSheet.create({
         paddingHorizontal: normalizePaddingSize(5)
     },
     title: {
-        fontFamily: 'sofia-bold',
+        fontFamily: 'sofiaBold',
         fontSize: 30,
         textAlign: 'center'
     },
     sectionTitle: {
-        fontFamily: 'sofia-bold',
+        fontFamily: 'sofiaBold',
         fontSize: 24,
         textAlign: 'center',
         marginTop: '3%'

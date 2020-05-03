@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
         marginHorizontal: normalizeMarginSize(20)
     },
     title: {
-        fontFamily: 'sofia-bold',
+        fontFamily: 'sofiaBold',
         fontSize: 21
     },
     additionalInfoContainer: {

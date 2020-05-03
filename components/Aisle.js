@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
     },
     aisleTitle: {
         fontSize: 20,
-        fontFamily: 'sofia-bold'
+        fontFamily: 'sofiaBold'
     },
     deleteAllAisleProductsContainer: {
         paddingHorizontal: normalizePaddingSize(10)

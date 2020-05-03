@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
         marginVertical: normalizeMarginSize(5)
     },
     creditsBoldLabel: {
-        fontFamily: 'sofia-bold'
+        fontFamily: 'sofiaBold'
     },
     hintLabel: {
         color: Colors.gray

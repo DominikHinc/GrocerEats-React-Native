@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
         paddingBottom: normalizePaddingSize(8)
     },
     amountButtonLabel: {
-        fontFamily: 'sofia-bold',
+        fontFamily: 'sofiaBold',
         fontSize: 25,
         textAlign: 'center',
         justifyContent: 'center',

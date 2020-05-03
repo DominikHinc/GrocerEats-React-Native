@@ -32,6 +32,17 @@
 		D397202D09D943AAA7BAA9CE /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00A2EB0BD39D452CB169A911 /* Octicons.ttf */; };
 		2199D3F456D8457FAD811269 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F898C2646EAE4A8A9BF59555 /* SimpleLineIcons.ttf */; };
 		763D543EC8E14ED194EC2E01 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B223E4DB61114D1D983FEB15 /* Zocial.ttf */; };
+		2834A37BB0CD4D27A71EC64F /* coiny-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50F2870B5DC4474B8DF9F3A1 /* coiny-regular.ttf */; };
+		6C5CCEEE712540659C7D53A0 /* Sofia-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6291D6B984745CE8AF0127F /* Sofia-Bold.ttf */; };
+		4357FC8F1E264431A2C37D8F /* Sofia-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7706111D075B4F5594F6E810 /* Sofia-Medium.ttf */; };
+		44CFBA47B88D4E2B8986C656 /* Sofia-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64CDE26D239D4B9A8D098A47 /* Sofia-Regular.ttf */; };
+		EB0B911871DC4F3EA1EB8155 /* coiny.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDE6A624796441B8B78BF569 /* coiny.ttf */; };
+		1F647BC2FC0B497EB9DB5FC1 /* sofia-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BC9887ACB56400585352E74 /* sofia-bold.ttf */; };
+		AB01436EF810441FB15C1D33 /* sofia-med.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 724D735131174D0E8707D7EA /* sofia-med.ttf */; };
+		14B0D80734F048AAA73E6E14 /* sofia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD3A8967D2724D6FADAAF205 /* sofia.ttf */; };
+		186547335E674409A05B0DFD /* bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F06A7523FA3841078996780F /* bold.ttf */; };
+		FF3B649C5B474C319D2EAEF6 /* sofiaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93A847E48F1648A8A590B7FD /* sofiaBold.ttf */; };
+		5CCFECF4C5744DC5ACA9D68A /* sofia-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6B9E7ED49A4F879792FB79 /* sofia-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +94,17 @@
 		00A2EB0BD39D452CB169A911 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F898C2646EAE4A8A9BF59555 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		B223E4DB61114D1D983FEB15 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		50F2870B5DC4474B8DF9F3A1 /* coiny-regular.ttf */ = {isa = PBXFileReference; name = "coiny-regular.ttf"; path = "../assets/fonts/coiny-regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F6291D6B984745CE8AF0127F /* Sofia-Bold.ttf */ = {isa = PBXFileReference; name = "Sofia-Bold.ttf"; path = "../assets/fonts/Sofia-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7706111D075B4F5594F6E810 /* Sofia-Medium.ttf */ = {isa = PBXFileReference; name = "Sofia-Medium.ttf"; path = "../assets/fonts/Sofia-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		64CDE26D239D4B9A8D098A47 /* Sofia-Regular.ttf */ = {isa = PBXFileReference; name = "Sofia-Regular.ttf"; path = "../assets/fonts/Sofia-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BDE6A624796441B8B78BF569 /* coiny.ttf */ = {isa = PBXFileReference; name = "coiny.ttf"; path = "../assets/fonts/coiny.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0BC9887ACB56400585352E74 /* sofia-bold.ttf */ = {isa = PBXFileReference; name = "sofia-bold.ttf"; path = "../assets/fonts/sofia-bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		724D735131174D0E8707D7EA /* sofia-med.ttf */ = {isa = PBXFileReference; name = "sofia-med.ttf"; path = "../assets/fonts/sofia-med.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD3A8967D2724D6FADAAF205 /* sofia.ttf */ = {isa = PBXFileReference; name = "sofia.ttf"; path = "../assets/fonts/sofia.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F06A7523FA3841078996780F /* bold.ttf */ = {isa = PBXFileReference; name = "bold.ttf"; path = "../assets/fonts/bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		93A847E48F1648A8A590B7FD /* sofiaBold.ttf */ = {isa = PBXFileReference; name = "sofiaBold.ttf"; path = "../assets/fonts/sofiaBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4C6B9E7ED49A4F879792FB79 /* sofia-Bold.ttf */ = {isa = PBXFileReference; name = "sofia-Bold.ttf"; path = "../assets/fonts/sofia-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +231,17 @@
 				00A2EB0BD39D452CB169A911 /* Octicons.ttf */,
 				F898C2646EAE4A8A9BF59555 /* SimpleLineIcons.ttf */,
 				B223E4DB61114D1D983FEB15 /* Zocial.ttf */,
+				50F2870B5DC4474B8DF9F3A1 /* coiny-regular.ttf */,
+				F6291D6B984745CE8AF0127F /* Sofia-Bold.ttf */,
+				7706111D075B4F5594F6E810 /* Sofia-Medium.ttf */,
+				64CDE26D239D4B9A8D098A47 /* Sofia-Regular.ttf */,
+				BDE6A624796441B8B78BF569 /* coiny.ttf */,
+				0BC9887ACB56400585352E74 /* sofia-bold.ttf */,
+				724D735131174D0E8707D7EA /* sofia-med.ttf */,
+				FD3A8967D2724D6FADAAF205 /* sofia.ttf */,
+				F06A7523FA3841078996780F /* bold.ttf */,
+				93A847E48F1648A8A590B7FD /* sofiaBold.ttf */,
+				4C6B9E7ED49A4F879792FB79 /* sofia-Bold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -368,6 +401,17 @@
 				D397202D09D943AAA7BAA9CE /* Octicons.ttf in Resources */,
 				2199D3F456D8457FAD811269 /* SimpleLineIcons.ttf in Resources */,
 				763D543EC8E14ED194EC2E01 /* Zocial.ttf in Resources */,
+				2834A37BB0CD4D27A71EC64F /* coiny-regular.ttf in Resources */,
+				6C5CCEEE712540659C7D53A0 /* Sofia-Bold.ttf in Resources */,
+				4357FC8F1E264431A2C37D8F /* Sofia-Medium.ttf in Resources */,
+				44CFBA47B88D4E2B8986C656 /* Sofia-Regular.ttf in Resources */,
+				EB0B911871DC4F3EA1EB8155 /* coiny.ttf in Resources */,
+				1F647BC2FC0B497EB9DB5FC1 /* sofia-bold.ttf in Resources */,
+				AB01436EF810441FB15C1D33 /* sofia-med.ttf in Resources */,
+				14B0D80734F048AAA73E6E14 /* sofia.ttf in Resources */,
+				186547335E674409A05B0DFD /* bold.ttf in Resources */,
+				FF3B649C5B474C319D2EAEF6 /* sofiaBold.ttf in Resources */,
+				5CCFECF4C5744DC5ACA9D68A /* sofia-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
