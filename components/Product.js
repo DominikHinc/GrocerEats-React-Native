@@ -134,19 +134,6 @@ const Product = React.memo(({ id, title, imageUrl, amountMain, unitMain, isCheck
                     <ProductAmountManager id={id} amountMain={amountMain} unitMain={unitMain} />
                 </View>
                 <View style={styles.leftSideIconsContainer}>
-                    {/* <View style={styles.indexIconsContainer}   >
-                        <View style={styles.singleIconWrapper}>
-                            {currentIndex > 0 && enableMoving === true && <TouchableOpacity style={styles.singleIconTouchable} onPress={() => moveProductOneIndexUp(index)}>
-                                <Ionicons name='ios-arrow-up' size={normalizeIconSize(20)} style={styles.indexIcon} />
-                            </TouchableOpacity>}
-                        </View>
-                        <View style={styles.singleIconWrapper}>
-                            {currentIndex < aisleLength - 1 && enableMoving === true && <TouchableOpacity style={styles.singleIconTouchable} onPress={() => moveProductOneIndexDown(index)}>
-                                <Ionicons name='ios-arrow-down' size={normalizeIconSize(20)} style={styles.indexIcon} />
-                            </TouchableOpacity>}
-                        </View>
-
-                    </View> */}
                     <View style={{ paddingRight: normalizePaddingSize(7) }}>
                         <TouchableOpacity style={styles.iconTouchable} onPress={checkboxPressHandler}>
                             <View style={styles.checkboxBox}>
@@ -165,16 +152,19 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '100%',
         alignItems: 'center',
+        
     },
     innerPaddingContainer: {
         flexDirection: 'row',
         width: '100%',
         alignItems: 'center',
-        paddingVertical: normalizePaddingSize(10)
+        paddingVertical: normalizePaddingSize(10),
+        
     },
 
     deleteIconContainer: {
         paddingHorizontal: normalizePaddingSize(10),
+        
     },
     deleteIcon: {
 
@@ -185,20 +175,23 @@ const styles = StyleSheet.create({
         borderRadius: Dimensions.get('window').width / 20,
         overflow: 'hidden',
         elevation: 2,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
     },
     image: {
         width: '100%',
-        height: '100%'
+        height: '100%',
+        
     },
     titleLabel: {
         fontSize: 19,
         fontFamily: 'sofia-med',
+        
     },
     infoContainer: {
         paddingTop: normalizePaddingSize(5),
         paddingLeft: normalizePaddingSize(5),
         width: '55%',
+        
     },
 
     leftSideIconsContainer: {
@@ -206,10 +199,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-end',
         flex: 1,
-        marginRight: '5%'
+        marginRight: '5%',
+       
+
     },
     indexIconsContainer: {
-        marginRight: normalizeMarginSize(10)
+        marginRight: normalizeMarginSize(10),
+        
     },
     iconTouchable: {
         flex: 1,
@@ -217,6 +213,7 @@ const styles = StyleSheet.create({
         height: '100%',
         justifyContent: 'center',
         alignItems: 'center',
+        
     },
     checkboxBox: {
         borderWidth: normalizeWidth(3.5),
@@ -225,6 +222,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: normalizeBorderRadiusSize(8),
         overflow: 'hidden',
+        
     },
     checkIcon: {
 
@@ -233,11 +231,13 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').width / 15,
         paddingHorizontal: normalizePaddingSize(15),
         borderWidth: 1,
-        borderColor: 'white'
+        borderColor: 'white',
+        
     },
     singleIconTouchable: {
         justifyContent: 'center',
-        flex: 1
+        flex: 1,
+        
     }
 
 
