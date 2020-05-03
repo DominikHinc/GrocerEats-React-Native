@@ -156,7 +156,8 @@ const styles = StyleSheet.create({
     textInputStyle: {
         fontSize: normalizeFontSize(15),
         borderBottomWidth: 1,
-        borderBottomColor: Colors.gray
+        borderBottomColor: Colors.gray,
+        padding:0
     },
     modalText: {
         textAlign: 'center',
