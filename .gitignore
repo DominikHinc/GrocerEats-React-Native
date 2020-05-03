@@ -1,7 +1,10 @@
 # OSX
 #
 .DS_Store
-
+constants/APIKEY.js
+methods/fetchFromServer.js
+store/actions/ApiActions.js
+store/reducers/ApiReducer.js
 # Xcode
 #
 build/
