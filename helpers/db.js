@@ -100,7 +100,7 @@ export const insertProduct = (id, title, imageUrl, amountMain, amountSecondary, 
     db.transaction(tx => {
       tx.executeSql(
         `INSERT INTO GroceryList (id, title, imageUrl, amountMain, amountSecondary, unitMain, unitSecondary, aisle, isChecked, willBeDeleted) VALUES (?, ? ,? ,? ,? ,? ,? ,? ,? ,?);`,
-        [id, title, imageUrl, amountMain.toString(), amountSecondary.toString(), unitMain, unitSecondary, aisle, isChecked, false],
+        [id, title, imageUrl, amountMain.toString(), amountSecondary.toString(), unitMain, unitSecondary, aisle, isChecked === true ? 0 : 1, false],
         (_, result) => {
           resolve(result);
         },
@@ -118,7 +118,7 @@ export const updateProduct = (targetId, id, title, imageUrl, amountMain, amountS
     db.transaction(tx => {
       tx.executeSql(
         `UPDATE GroceryList SET id = ?, title = ?, imageUrl = ?, amountMain = ?, amountSecondary = ?, unitMain = ?, unitSecondary = ?, aisle = ?, isChecked = ? WHERE id = ?`,
-        [id, title, imageUrl, amountMain, amountSecondary, unitMain, unitSecondary, aisle, isChecked, targetId],
+        [id, title, imageUrl, amountMain, amountSecondary, unitMain, unitSecondary, aisle, isChecked === true ? 0 : 1, targetId],
         (_, result) => {
           resolve(result);
         },
@@ -154,7 +154,7 @@ export const setProductCheck = (id, shouldBeChecked) => {
     db.transaction(tx => {
       tx.executeSql(
         `UPDATE GroceryList SET isChecked = ? WHERE id = ?`,
-        [shouldBeChecked, id],
+        [shouldBeChecked === true ? 0 : 1, id],
         (_, result) => {
           resolve(result);
         },
