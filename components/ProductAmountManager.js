@@ -69,14 +69,17 @@ const styles = StyleSheet.create({
     amountLabel: {
         marginHorizontal: normalizeMarginSize(5)
     },
+    
     textInputContainer: {
 
     },
+
     amountTextInput: {
         fontFamily: 'sofia-med',
         fontSize: normalizeFontSize(17),
         textAlign: 'center',
-
+        padding:0,
+        color:'black'
     },
     editIcon: {
         marginLeft: normalizeMarginSize(6)
