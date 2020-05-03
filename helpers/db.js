@@ -3,7 +3,6 @@ import SQLite from 'react-native-sqlite-storage';
 const db = SQLite.openDatabase('GrocerEats.db');
 
 export const init_saved_recipes_db = () => {
-console.log("Opening saved recipes db")
   const promise = new Promise((resolve, reject) => {
     db.transaction((tx) => {
       tx.executeSql('CREATE TABLE IF NOT EXISTS SavedRecipes (mealId INTEGER PRIMARY KEY NOT NULL, mealDetails TEXT NOT NULL);',
@@ -75,7 +74,6 @@ export const deleteSavedRecipe = (mealId) => {
 }
 
 export const fetchSavedRecipes = () => {
-console.log("Fetching saved recipes")
   const promise = new Promise((resolve, reject) => {
     db.transaction(tx => {
       tx.executeSql(

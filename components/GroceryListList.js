@@ -80,35 +80,6 @@ const GroceryListList = ({ data }) => {
     }, [setVisibilityOfAisles])
 
 
-    // const moveProductOneIndexUp = useCallback((index) => {
-    //     console.log(canMove)
-    //     if (canMove === true) {
-    //     // console.log("Moving " + index + " One up")
-    //     // const currnetArrayCopy = data;
-    //     // const movedItemCopy = currnetArrayCopy[index]
-    //     // currnetArrayCopy[index] = currnetArrayCopy[index - 1]
-    //     // currnetArrayCopy[index - 1] = movedItemCopy;
-    //     // dispatch(setNewProductsList(currnetArrayCopy))
-    //     setCanMove(false)
-    //     dispatch(swapTwoProductsOrder(index,-1))
-    //     }
-
-    // },[canMove,dispatch,setCanMove,data])
-
-    // const moveProductOneIndexDown = useCallback((index) => {
-    //     console.log(canMove)
-    //     if (canMove === true) {
-    //     // console.log("Moving " + index + " One down")
-    //     // const currnetArrayCopy = data;
-    //     // const movedItemCopy = currnetArrayCopy[index]
-    //     // currnetArrayCopy[index] = currnetArrayCopy[index + 1]
-    //     // currnetArrayCopy[index + 1] = movedItemCopy;
-    //     // dispatch(setNewProductsList(currnetArrayCopy))
-    //     setCanMove(false)
-    //     dispatch(swapTwoProductsOrder(index,1))
-    //     }
-
-    // },[canMove,dispatch,setCanMove,data])
 
     const renderListHeader = ({ section }) => {
         return <View key={section.title}><Aisle aisle={section.title} data={section.data}

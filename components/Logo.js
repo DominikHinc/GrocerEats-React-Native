@@ -14,7 +14,6 @@ const Logo = (props) => {
     const insets = useSafeArea();
     const { shouldLogoBeShown } = props
 
-    // const [logoAnimationProgress, setLogoAnimationProgress] = useState(new Animated.Value(shouldLogoBeShown === undefined ? 1 : shouldLogoBeShown ? 1 : 0))
     const [logoInitialHeight, setLogoInitialHeight] = useState(-1)
 
     const [showCreditsModal, setShowCreditsModal] = useState(false)
@@ -22,43 +21,12 @@ const Logo = (props) => {
     const [isLogoVisible, setisLogoVisible] = useState(shouldLogoBeShown)
 
     useEffect(() => {
-        // shouldLogoBeShown === undefined ? showLogo() : shouldLogoBeShown ? showLogo() : hideLogo()
          LayoutAnimation.configureNext(CustomLayoutDelete)
         setisLogoVisible(shouldLogoBeShown)
        
     }, [shouldLogoBeShown])
 
-    // const hideLogo = () => {
-    //     Animated.timing(logoAnimationProgress, {
-    //         toValue: 0,
-    //         duration: 150,
-    //         easing: Easing.linear
-    //     }).start()
-    // }
-    // const showLogo = () => {
-    //     Animated.timing(logoAnimationProgress, {
-    //         toValue: 1,
-    //         duration: 150,
-    //         easing: Easing.linear
-    //     }).start()
-    // }
 
-    // const logoHeight = logoAnimationProgress.interpolate({
-    //     inputRange: [0, 1],
-    //     outputRange: [0, normalizeHeight(insets.top + 69)],
-    // })
-    // const logoOpacity = logoAnimationProgress.interpolate({
-    //     inputRange: [0, 1],
-    //     outputRange: [0, 1]
-    // })
-    // const onLayout = (e) => {
-    //     console.log(e.nativeEvent.layout.height)
-    //     if (logoInitialHeight < 0) {
-
-    //         setLogoInitialHeight(e.nativeEvent.layout.height)
-    //     }
-
-    // }
     return (
         <Animated.View
             style={{ ...styles.safeAreaViewWrapper, paddingTop: insets.top + normalizePaddingSize(5)}}>

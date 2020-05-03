@@ -30,7 +30,6 @@ const ProductAmountManager = React.memo(({id, amountMain, unitMain }) => {
         if(isEditable === false){
             const isValid = amountTextInputValue.match(/^-?\d*(\.\d+)?$/);
             if (isValid && parseFloat(amountTextInputValue) > 0) {
-                //console.log("Object will be edited")
                 dispatch(editProductAmount(id, amountTextInputValue))
             } else {
                 Alert.alert("Invalid amount", "You can only enter numbers, that are greater than 0")

@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 
 import { init_grocery_list_db, init_saved_recipes_db } from './helpers/db';
 
-init_saved_recipes_db().then(()=>{console.log("Opened Saved Recipes Database successfully")
+init_saved_recipes_db().then(()=>{
 }).catch(err=>{
   Alert.alert("Something went wrong","Error while initializing saved recipes database")
 })

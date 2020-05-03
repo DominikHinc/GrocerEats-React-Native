@@ -32,7 +32,6 @@ export const saveRecipe = (id, mealDetails) => {
 }
 
 export const removeSavedRecipe = (id) => {
-    console.log("Remove action")
     return async dispatch => {
         try {
             await deleteSavedRecipe(id);
@@ -47,15 +46,12 @@ export const loadSavedRecipes = () => {
     return async dispatch => {
         try {
             const dbResult = await fetchSavedRecipes()
-            // console.log("dbResult")
-            // console.log(dbResult.rows.raw())
             const mappedArray = dbResult.rows.raw().map(item => {
                 const parsedDetails = JSON.parse(item.mealDetails)
                 return { id: item.mealId, mealDetails: parsedDetails }
             })
             dispatch({ type: LOAD_SAVED_RECIPES, data: mappedArray })
         } catch (error) {
-            console.log(error.message)
             Alert.alert("Something went wrong.", 'Error while loading saved recipes')
         }
 
