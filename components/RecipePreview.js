@@ -3,7 +3,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import Foundation from 'react-native-vector-icons/Foundation'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import React from 'react'
-import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, TouchableOpacity, View, Text } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import DefaultText from '../components/DefaultText'
 import Colors from '../constants/Colors'
@@ -27,9 +27,9 @@ const RecipePreview = ({ title, id, image, readyInMinutes, servings, onPress, mi
     const onHeartIconPressed = () => {
         !isMealSaved ? dispatch(saveRecipe(id, savedData === undefined ? undefined : savedData)) : dispatch(removeSavedRecipe(id))
     }
-
+    
     return (
-        <View>
+        <View style={{flex:1}}>
             <FloatingHeartIcon active={isMealSaved} small={true} alignLeft={true} onPress={onHeartIconPressed} />
             <TouchableOpacity style={{ flex: 1 }} onPress={onPress}>
                 <View style={styles.mainContainer}>
