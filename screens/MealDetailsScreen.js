@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
-import { ActivityIndicator, Alert, Animated, Dimensions, Easing, StyleSheet, View, Text } from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign'
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons'
+import NetInfo from '@react-native-community/netinfo';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { ActivityIndicator, Alert, Animated, Dimensions, Easing, StyleSheet, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import { useDispatch, useSelector } from 'react-redux';
 import AdditonalMealInfo from '../components/AdditonalMealInfo';
 import AddToGroceryListModal from '../components/AddToGroceryListModal';
@@ -15,10 +15,9 @@ import MealTags from '../components/MealTags';
 import SwipableCard from '../components/SwipableCard';
 import Colors from '../constants/Colors';
 import { ERROR_WHILE_FETCHING, fetchMealDetailsFromServer, MAXIMUM_NUMERS_OF_CALLS_REACHED, SUCCESS } from '../methods/fetchFromServer';
-import { normalizeIconSize, normalizePaddingSize, normalizeBorderRadiusSize } from '../methods/normalizeSizes';
-import { removeSavedRecipe, saveRecipe } from '../store/actions/SavedRecipesActions';
+import { normalizeBorderRadiusSize, normalizeIconSize, normalizePaddingSize } from '../methods/normalizeSizes';
 import ProductModel from '../models/ProductModel';
-import NetInfo from '@react-native-community/netinfo';
+import { removeSavedRecipe, saveRecipe } from '../store/actions/SavedRecipesActions';
 
 
 const SCROLLING_TAB_BORDER_RADIUS = normalizeBorderRadiusSize(32) 

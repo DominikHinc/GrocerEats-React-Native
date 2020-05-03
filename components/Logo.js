@@ -1,12 +1,12 @@
-import Ionicons from 'react-native-vector-icons/Ionicons'
 import React, { useEffect, useState } from 'react'
-import { Animated, Easing, StyleSheet, View, TouchableOpacity, LayoutAnimation } from 'react-native'
+import { Animated, LayoutAnimation, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { useSafeArea } from 'react-native-safe-area-context'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 import Colors from '../constants/Colors'
-import { normalizeIconSize, normalizePaddingSize, normalizeHeight } from '../methods/normalizeSizes'
-import DefaultText from './DefaultText'
-import CreditsModal from './CreditsModal'
 import { CustomLayoutDelete } from '../constants/LayoutAnimations'
+import { normalizeIconSize, normalizePaddingSize } from '../methods/normalizeSizes'
+import CreditsModal from './CreditsModal'
+import DefaultText from './DefaultText'
 
 
 

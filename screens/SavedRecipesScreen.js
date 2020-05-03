@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import { useSelector } from 'react-redux'
 import DefaultText from '../components/DefaultText'
 import Logo from '../components/Logo'

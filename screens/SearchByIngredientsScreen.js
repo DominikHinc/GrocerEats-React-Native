@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react'
-import { ActivityIndicator, Alert, Keyboard, KeyboardAvoidingView, LayoutAnimation, StyleSheet, TouchableWithoutFeedback, View, Text } from 'react-native'
+import React, { useEffect, useRef, useState } from 'react'
+import { ActivityIndicator, Alert, Keyboard, KeyboardAvoidingView, LayoutAnimation, StyleSheet, TouchableWithoutFeedback, View } from 'react-native'
 import DefaultText from '../components/DefaultText'
 import FloatingSearchIcon from '../components/FloatingSearchIcon'
 import IngredientsList from '../components/IngredientsList'
