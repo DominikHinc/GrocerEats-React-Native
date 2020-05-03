@@ -45,7 +45,7 @@ export const deleteAllProductsMentToBeRemoved = () => {
 
         try {
             getState().groceryList.idOfProductsToDelete.forEach(async item => {
-                const dbResault = await deleteProduct(item);
+                await deleteProduct(item);
             })
 
             dispatch({ type: DELETE_ALL_PRODUCTS_MENT_TO_BE_REMOVED })
@@ -119,9 +119,9 @@ export const loadSavedProducts = () => {
     return async dispatch => {
 
         try {
-            const dbResault = await fetchSavedProducts();
+            const dbResult = await fetchSavedProducts();
 
-            const productsList = dbResault.rows._array.map(item => {
+            const productsList = dbResult.rows.raw().map(item => {
                 item.isChecked = item.isChecked === 0 ? true : false
                 item.willBeDeleted = item.willBeDeleted === 0 ? true : false
                 return item
