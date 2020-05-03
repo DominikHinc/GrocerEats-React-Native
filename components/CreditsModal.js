@@ -1,5 +1,6 @@
 import React from 'react'
-import { Clipboard, Modal, ScrollView, StyleSheet, ToastAndroid, TouchableOpacity, View } from 'react-native'
+import {Modal, ScrollView, StyleSheet, ToastAndroid, TouchableOpacity, View } from 'react-native'
+import Clipboard from "@react-native-community/clipboard";
 import Colors from '../constants/Colors'
 import { normalizeBorderRadiusSize, normalizeMarginSize, normalizePaddingSize } from '../methods/normalizeSizes'
 import DefaultText from './DefaultText'
