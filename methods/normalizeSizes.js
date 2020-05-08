@@ -14,7 +14,7 @@ export const normalizeFontSize = (size)=>{
     }
 }
 
-//Seperating them just in case i will want to change it in some way just for specyifc component types
+//Separating them just in case i will want to change it in some way just for specific component types
 
 export const normalizeIconSize = (size) =>{
     return normalizeFontSize(size);

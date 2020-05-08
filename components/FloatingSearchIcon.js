@@ -12,7 +12,7 @@ const FloatingSearchIcon = React.memo(({ onPress }) => {
 
     useEffect(() => {
         keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', keyboardDidShowHandler)
-        keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', kyeboardDidHideHandler)
+        keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', keyboardDidHideHandler)
         return () => {
             keyboardDidShowListener.remove();
             keyboardDidHideListener.remove();
@@ -23,7 +23,7 @@ const FloatingSearchIcon = React.memo(({ onPress }) => {
     const keyboardDidShowHandler = (e) => {
         LayoutAnimation.configureNext(CustomLayoutSpring)
     }
-    const kyeboardDidHideHandler = (e) => {
+    const keyboardDidHideHandler = (e) => {
         LayoutAnimation.configureNext(CustomLayoutSpring)
     }
 

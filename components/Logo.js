@@ -18,11 +18,11 @@ const Logo = (props) => {
 
     const [showCreditsModal, setShowCreditsModal] = useState(false)
 
-    const [isLogoVisible, setisLogoVisible] = useState(shouldLogoBeShown)
+    const [isLogoVisible, setIsLogoVisible] = useState(shouldLogoBeShown)
 
     useEffect(() => {
          LayoutAnimation.configureNext(CustomLayoutDelete)
-        setisLogoVisible(shouldLogoBeShown)
+        setIsLogoVisible(shouldLogoBeShown)
        
     }, [shouldLogoBeShown])
 
@@ -83,7 +83,6 @@ const styles = StyleSheet.create({
     creditsTouchableInnerView: {
         paddingBottom: normalizePaddingSize(15),
         paddingLeft: normalizePaddingSize(15),
-        //  borderWidth: 1, 
         flexDirection: 'row',
         justifyContent: 'flex-end'
     }

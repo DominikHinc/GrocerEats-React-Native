@@ -54,7 +54,7 @@ const RecipePreview = ({ title, id, image, readyInMinutes, servings, onPress, mi
                             {missedIngredients !== undefined && missedIngredients > 0 && <DefaultText style={styles.basicInfo}>{missedIngredients} missing</DefaultText>}
 
                         </View>
-                        <View style={[styles.arrowConatiner, { marginTop: usedIngredients !== undefined && missedIngredients !== undefined ? 0 : normalizeMarginSize(-5) }]}>
+                        <View style={[styles.arrowContainer, { marginTop: usedIngredients !== undefined && missedIngredients !== undefined ? 0 : normalizeMarginSize(-5) }]}>
                             <Ionicons name="ios-arrow-round-forward" size={normalizeIconSize(30)} />
                         </View>
                     </View>
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
         fontFamily: 'sofiaBold',
         fontSize: 20,
     },
-    arrowConatiner: {
+    arrowContainer: {
         flexDirection: 'row-reverse',
     },
     indicatorIcons: {

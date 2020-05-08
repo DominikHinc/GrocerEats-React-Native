@@ -13,9 +13,9 @@ const IngredientsList = ({ ingredientsList, removeIngredient, removeAllIngredien
 
     return (
         <View style={styles.mainContainer}>
-            <View style={styles.removeAllIngredinetsMainContainer}>
-                <TouchableWithoutFeedback onPress={removeAllIngredients} style={styles.removeAllIngredinetsTouchable}>
-                    <View style={styles.removeAllIngredinetsInnerContainer}>
+            <View style={styles.removeAllIngredientsMainContainer}>
+                <TouchableWithoutFeedback onPress={removeAllIngredients} style={styles.removeAllIngredientsTouchable}>
+                    <View style={styles.removeAllIngredientsInnerContainer}>
                         <Feather style={styles.xIcon} name="x" size={normalizeIconSize(22)} color={Colors.red} />
                         <DefaultText style={styles.allLabel}>All</DefaultText>
                     </View>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         minWidth: normalizeWidth(60),
 
     },
-    removeAllIngredinetsMainContainer: {
+    removeAllIngredientsMainContainer: {
         position: 'absolute',
         top: normalizePaddingSize(-25),
         left: normalizePaddingSize(3),
@@ -50,11 +50,11 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width / 5,
 
     },
-    removeAllIngredinetsTouchable: {
+    removeAllIngredientsTouchable: {
         flex: 1,
         justifyContent: 'center'
     },
-    removeAllIngredinetsInnerContainer: {
+    removeAllIngredientsInnerContainer: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center'

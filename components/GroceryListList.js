@@ -21,7 +21,7 @@ const GroceryListList = ({ data }) => {
         if (canMove === false) {
             LayoutAnimation.configureNext(CustomLayoutMove, () => setCanMove(true))
         }
-        //Here is created data list that can be interperted by Section List
+        //Here is created data list that can be interpreted by Section List
         data.forEach(item => {
             if (unorderedAislesList["All"] === undefined) {
                 unorderedAislesList["All"] = [item]

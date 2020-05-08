@@ -7,7 +7,7 @@ import RecipePreview from './RecipePreview'
 
 
 
-const MealPreviewList = React.memo(({ data, onEndReached, noMoreDataToDisplay, navigationProp, endOfListText, renderRecipeSearchedByIngredinets, renderSavedRecipe }) => {
+const MealPreviewList = React.memo(({ data, onEndReached, noMoreDataToDisplay, navigationProp, endOfListText, renderRecipeSearchedByIngredients, renderSavedRecipe }) => {
 
     const renderStandardSearchRecipePreviews = ({ item, index }) => {
         item = renderSavedRecipe ? item = item.mealDetails : item
@@ -38,7 +38,7 @@ const MealPreviewList = React.memo(({ data, onEndReached, noMoreDataToDisplay, n
 
     return (
         <FlatList style={styles.listStyle} keyExtractor={item => item.id.toString()} data={data}
-            renderItem={renderRecipeSearchedByIngredinets === true ? renderRecipePreviewSearchedByIngredients : renderStandardSearchRecipePreviews}
+            renderItem={renderRecipeSearchedByIngredients === true ? renderRecipePreviewSearchedByIngredients : renderStandardSearchRecipePreviews}
             showsVerticalScrollIndicator={false} ItemSeparatorComponent={(hilighted) => <View style={styles.recipesListItemSeparator} />}
             contentContainerStyle={{ paddingBottom: '3%', paddingTop: '5%' }} scrollEventThrottle={30}
             onEndReachedThreshold={0.1} onEndReached={onEndReached !== undefined ? onEndReached : null}

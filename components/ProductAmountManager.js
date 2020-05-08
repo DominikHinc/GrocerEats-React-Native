@@ -43,7 +43,7 @@ const ProductAmountManager = React.memo(({id, amountMain, unitMain }) => {
 
 
     return (
-        <View style={styles.amountMainConatiner}>
+        <View style={styles.amountMainContainer}>
             <View style={styles.textInputContainer}>
                 <TextInput ref={textInputRef} editable={isEditing} value={amountTextInputValue} onChangeText={setAmountText} 
                 style={styles.amountTextInput} maxLength={6} keyboardType='numeric' onSubmitEditing={()=>{setIsTextinputEditable(false)}}  />
@@ -61,7 +61,7 @@ const ProductAmountManager = React.memo(({id, amountMain, unitMain }) => {
 })
 
 const styles = StyleSheet.create({
-    amountMainConatiner: {
+    amountMainContainer: {
         flexDirection: 'row',
         alignItems: 'center'
     },

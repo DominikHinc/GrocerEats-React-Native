@@ -6,13 +6,13 @@ import Logo from '../components/Logo'
 import MealPreviewList from '../components/MealPreviewList'
 import SearchBar from '../components/SearchBar'
 import Colors from '../constants/Colors'
-import { ERROR_WHILE_FETCHING, fetchStandardSearchFromServer, MAXIMUM_NUMERS_OF_CALLS_REACHED, NO_MORE_RECIPES, RECIPE_COULD_NOT_BE_FOUND, SUCCESS } from '../methods/fetchFromServer'
+import { ERROR_WHILE_FETCHING, fetchStandardSearchFromServer, MAXIMUM_NUMBERS_OF_CALLS_REACHED, NO_MORE_RECIPES, RECIPE_COULD_NOT_BE_FOUND, SUCCESS } from '../methods/fetchFromServer'
 import { loadSavedProducts } from '../store/actions/GroceryListActions'
 import { loadSavedRecipes } from '../store/actions/SavedRecipesActions'
 
 
 const StandardSearchScreen = (props) => {
-    //UI Related Vriables
+    //UI Related Variables
     const [textToSearch, setTextToSearch] = useState("")
     //Fetching Data From Server Related Variables
     const [recipesList, setRecipesList] = useState([])
@@ -38,7 +38,7 @@ const StandardSearchScreen = (props) => {
     }, [dispatch])
 
 
-    //Animation Realted Variables
+    //Animation Related Variables
     const [shouldLogoBeShown, setShouldLogoBeShown] = useState(true)
 
     //Fetching data from server related functions
@@ -55,7 +55,7 @@ const StandardSearchScreen = (props) => {
                     case ERROR_WHILE_FETCHING:
                         Alert.alert("Something went wrong", response.error)
                         break;
-                    case MAXIMUM_NUMERS_OF_CALLS_REACHED:
+                    case MAXIMUM_NUMBERS_OF_CALLS_REACHED:
                         Alert.alert("Something went wrong", response.error)
                         break;
                     case NO_MORE_RECIPES:

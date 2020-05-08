@@ -4,7 +4,7 @@ import Colors from '../constants/Colors';
 import { normalizePaddingSize } from '../methods/normalizeSizes';
 import DefaultText from './DefaultText';
 
-const AdditonalMealInfo = React.memo(({ mealDetails }) => {
+const AdditionalMealInfo = React.memo(({ mealDetails }) => {
     const additionalInfoData = useRef({
         Cheap: mealDetails.cheap,
         Dairy_free: mealDetails.dairyFree,
@@ -37,8 +37,8 @@ const AdditonalMealInfo = React.memo(({ mealDetails }) => {
         return positiveRenderList.map(item => {
             let modifiedItem = item;
             if(item.includes("_")){
-                let splited = modifiedItem.split("_");
-                modifiedItem = splited[0] + " " + splited[1];
+                let splitItems = modifiedItem.split("_");
+                modifiedItem = splitItems[0] + " " + splitItems[1];
             }
             return (
                 <View key={item} style={styles.listItemContainer}>
@@ -51,8 +51,8 @@ const AdditonalMealInfo = React.memo(({ mealDetails }) => {
         return negativeRenderList.map(item => {
             let modifiedItem = item;
             if(item.includes("_")){
-                let splited = modifiedItem.split("_");
-                modifiedItem = splited[0] + " " + splited[1];
+                let splitItems = modifiedItem.split("_");
+                modifiedItem = splitItems[0] + " " + splitItems[1];
             }
             return (
                 <View key={item} style={styles.listItemContainer}>
@@ -92,4 +92,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default AdditonalMealInfo
+export default AdditionalMealInfo

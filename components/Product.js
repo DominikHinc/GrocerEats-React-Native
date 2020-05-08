@@ -24,7 +24,6 @@ const Product = React.memo(({ id, title, imageUrl, amountMain, unitMain, isCheck
         interpolate
     } = Animated;
 
-    // const [currentIndex, setCurrentIndex] = useState(index)
     const shouldProductBeRemoved = useSelector(state => state.groceryList.idOfProductsToDelete.find(item => item === id))
 
     const [reanimatedValue, setReanimatedValue] = useState(new Value(1))
@@ -34,10 +33,6 @@ const Product = React.memo(({ id, title, imageUrl, amountMain, unitMain, isCheck
 
     const dispatch = useDispatch()
 
-    // useEffect(() => {
-    //     //Because using just index passed by parent seems to sometimes bug everything, it was necessary to use local state
-    //     setCurrentIndex(index)
-    // }, [index])
 
     useEffect(() => {
         if (shouldProductBeRemoved !== undefined) {

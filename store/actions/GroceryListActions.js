@@ -8,9 +8,9 @@ export const SETCHECKOFPRODUCT = 'SET_CHECK_OF_PRODUCT'
 export const EDIT_PRODUCT_AMOUNT = "EDIT_PRODUCT_AMOUNT"
 export const SET_NEW_PRODUCTS_LIST = "SET_NEW_PRODUCTS_LIST"
 export const SET_CHECK_OF_MULTIPLE_PRODUCTS = "SET_CHECK_OF_MULTIPLE_PRODUCTS"
-export const DELETE_ALL_PRODUCTS_MENT_TO_BE_REMOVED = "DELETE_ALL_PRODUCTS_MENT_TO_BE_REMOVED"
+export const DELETE_ALL_PRODUCTS_MEANT_TO_BE_REMOVED = "DELETE_ALL_PRODUCTS_MEANT_TO_BE_REMOVED"
 export const LOAD_SAVED_PRODUCTS = 'LOAD_SAVED_PRODUCTS'
-export const SWAP_TWO_PRODUCTS_ODRDER = 'SWAP_TWO_PRODUCTS_ODRDER'
+export const SWAP_TWO_PRODUCTS_ORDER = 'SWAP_TWO_PRODUCTS_ORDER'
 
 
 export const addProduct = (product) => {
@@ -21,13 +21,12 @@ export const addProduct = (product) => {
 
             dispatch({ type: ADD_PRODUCT, product })
         } catch (error) {
-            // Alert.alert("Something went wrong.", error.message)
             Alert.alert("Something went wrong.", "Error while adding product")
         }
 
     }
 }
-//This will only add product id to list that will delete it from Grocery list only after deleteAllProductsMentToBeRemoved is called
+//Item's id will be placed in buffer list and will only be removed when deleteAllProductsMeantToBeRemoved is called
 export const removeProduct = (id) => {
     return {
         type: REMOVE_PRODUCT,
@@ -48,9 +47,8 @@ export const deleteAllProductsMentToBeRemoved = () => {
                 await deleteProduct(item);
             })
 
-            dispatch({ type: DELETE_ALL_PRODUCTS_MENT_TO_BE_REMOVED })
+            dispatch({ type: DELETE_ALL_PRODUCTS_MEANT_TO_BE_REMOVED })
         } catch (error) {
-            // Alert.alert("Something went wrong", error.message)
             Alert.alert("Something went wrong.", "Error while deleting product")
         }
 
@@ -80,7 +78,6 @@ export const editProductAmount = (id, amountMain) => {
             await setProductAmount(id, amountMain)
             dispatch({ type: EDIT_PRODUCT_AMOUNT, id, amountMain })
         } catch (error) {
-            // Alert.alert("Something went wrong", error.message)
             Alert.alert("Something went wrong.", "Error while editing product")
         }
     }
@@ -93,7 +90,6 @@ export const setCheckOfProduct = (id, shouldProductBeChecked) => {
 
             dispatch({ type: SETCHECKOFPRODUCT, id, shouldProductBeChecked })
         } catch (error) {
-            // Alert.alert("Something went wrong", error.message)
             Alert.alert("Something went wrong.", "Error while editing product")
         }
 
@@ -108,7 +104,6 @@ export const setCheckOfMultipleProducts = (idsArray, shouldAllBeChecked) => {
 
             dispatch({ type: SET_CHECK_OF_MULTIPLE_PRODUCTS, idsArray, shouldAllBeChecked })
         } catch (error) {
-            // Alert.alert("Something went wrong", error.message)
             Alert.alert("Something went wrong.", "Error while editing product")
         }
 
@@ -129,7 +124,6 @@ export const loadSavedProducts = () => {
 
             dispatch({ type: SET_NEW_PRODUCTS_LIST, productsList: productsList })
         } catch (error) {
-            // Alert.alert("Something went wrong", error.message)
             Alert.alert("Something went wrong.", "Error while loading grocery list")
         }
 

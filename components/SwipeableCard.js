@@ -8,21 +8,21 @@ import ProductModel from '../models/ProductModel';
 import DefaultText from './DefaultText';
 
 
-const SwipableCard = React.memo(({ item, setScrolling, setInfoForModal, noInternetConnection }) => {
+const SwipeableCard = React.memo(({ item, setScrolling, setInfoForModal, noInternetConnection }) => {
     //Variables related to animation
     const translateX = useRef(new Animated.ValueXY()).current;
     //Variables related to units and their amounts
-    let rounderdAmountMain = item.amount > 1 ? Math.round(item.amount) : Math.round(item.amount * 100) / 100;
-    let rounderdAmountSecondary;
+    let roundedAmountMain = item.amount > 1 ? Math.round(item.amount) : Math.round(item.amount * 100) / 100;
+    let roundedAmountSecondary;
     const unitMain = item.unit;
     const unitSecondary = item.unit === item.measures.metric.unitShort || item.unit === item.measures.metric.unitLong ? item.measures.us.unitShort : item.measures.metric.unitShort;
     if (item.unit === item.measures.metric.unitShort || item.unit === item.measures.metric.unitLong) {
-        rounderdAmountSecondary = item.measures.us.amount > 1 ? Math.round(item.measures.us.amount) : Math.round(item.measures.us.amount * 100) / 100
+        roundedAmountSecondary = item.measures.us.amount > 1 ? Math.round(item.measures.us.amount) : Math.round(item.measures.us.amount * 100) / 100
     } else {
-        rounderdAmountSecondary = item.measures.metric.amount > 1 ? Math.round(item.measures.metric.amount) : Math.round(item.measures.metric.amount * 100) / 100
+        roundedAmountSecondary = item.measures.metric.amount > 1 ? Math.round(item.measures.metric.amount) : Math.round(item.measures.metric.amount * 100) / 100
     }
 
-    const startReturnToOrginalPositionAnimation = () => {
+    const startReturnToOriginalPositionAnimation = () => {
         Animated.spring(translateX.x, {
             toValue: 0,
             bounciness: 100,
@@ -32,7 +32,7 @@ const SwipableCard = React.memo(({ item, setScrolling, setInfoForModal, noIntern
     }
 
     const modalShouldAppear = () => {
-        setInfoForModal(new ProductModel(item.id, item.name, `https://spoonacular.com/cdn/ingredients_100x100/${item.image}`,rounderdAmountMain,rounderdAmountSecondary,
+        setInfoForModal(new ProductModel(item.id, item.name, `https://spoonacular.com/cdn/ingredients_100x100/${item.image}`,roundedAmountMain,roundedAmountSecondary,
         unitMain,unitSecondary,item.aisle))
     }
 
@@ -51,12 +51,12 @@ const SwipableCard = React.memo(({ item, setScrolling, setInfoForModal, noIntern
         },
         onPanResponderRelease: (evt, gestureState) => {
             setScrolling(true)
-            startReturnToOrginalPositionAnimation();
+            startReturnToOriginalPositionAnimation();
             gestureState.dx <= (-Dimensions.get('window').width / 4) + normalizeIconSize(30) ? modalShouldAppear() : null
         },
         onPanResponderTerminate: (evt, gestureState) => {
             setScrolling(true)
-            startReturnToOrginalPositionAnimation();
+            startReturnToOriginalPositionAnimation();
             gestureState.dx <= (-Dimensions.get('window').width / 4) + normalizeIconSize(30) ? modalShouldAppear() : null
         },
     }), []);
@@ -88,7 +88,7 @@ const SwipableCard = React.memo(({ item, setScrolling, setInfoForModal, noIntern
                 </View>
                 <View style={styles.ingredientInfoContainer}>
                     <DefaultText style={styles.ingredientNameLabel} >{item.name[0].toUpperCase() + item.name.slice(1, item.name.length)}</DefaultText>
-                    <DefaultText style={styles.ingredientNameLabel}>{rounderdAmountMain} {unitMain}</DefaultText>
+                    <DefaultText style={styles.ingredientNameLabel}>{roundedAmountMain} {unitMain}</DefaultText>
                 </View>
                 <View style={styles.draggableArrowContainer} {...panResponder.panHandlers}>
                     <Ionicons name='ios-arrow-dropleft' size={normalizeIconSize(27)} />
@@ -156,4 +156,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default SwipableCard
+export default SwipeableCard

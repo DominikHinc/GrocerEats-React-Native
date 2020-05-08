@@ -10,7 +10,7 @@ export const saveRecipe = (id, mealDetails) => {
     return async dispatch => {
         try {
             if (mealDetails === undefined) {
-                //When saving recipe from list view it has only basic information, because of that there is fetching to server for more detalied info
+                //When saving recipe from list view it has only basic information, because of that there is fetching to server for more detailed info
                 const fetchedDetails = await fetchMealDetailsFromServer(id);
                 if (fetchedDetails.status === SUCCESS) {
                     mealDetails = fetchedDetails.response
@@ -24,7 +24,6 @@ export const saveRecipe = (id, mealDetails) => {
 
             dispatch({ type: SAVE_RECIPE, id, mealDetails })
         } catch (error) {
-            // Alert.alert("Something went wrong.", error.message)
             Alert.alert("Something went wrong.", "Error while saving recipe")
         }
 

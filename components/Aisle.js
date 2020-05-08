@@ -28,7 +28,7 @@ const Aisle = React.memo(({ aisle, data, isVisible, switchAisleVisibility }) => 
 
     const listOfProductsToBeRemoved = useSelector(state => state.groceryList.idOfProductsToDelete)
 
-    const [iconAnimatiedValue, setIconAnimatiedValue] = useState(new Animated.Value(isVisible ? 0 : 1))
+    const [iconAnimatedValue, setIconAnimatedValue] = useState(new Animated.Value(isVisible ? 0 : 1))
     const [reanimatedValue, setReanimatedValue] = useState(new Value(1))
 
     const dispatch = useDispatch()
@@ -130,7 +130,7 @@ const Aisle = React.memo(({ aisle, data, isVisible, switchAisleVisibility }) => 
     //Functions and Interpolated Variables Related To Animated from react native
 
     const startIconAnimation = () => {
-        Animated.spring(iconAnimatiedValue, {
+        Animated.spring(iconAnimatedValue, {
             toValue: isVisible ? 1 : 0,
             bounciness: 10,
             useNativeDriver: true
@@ -142,7 +142,7 @@ const Aisle = React.memo(({ aisle, data, isVisible, switchAisleVisibility }) => 
 
     const iconRotation = {
         transform: [{
-            rotate: iconAnimatiedValue.interpolate({
+            rotate: iconAnimatedValue.interpolate({
                 inputRange: [0, 1],
                 outputRange: ["180deg", "360deg"]
             })

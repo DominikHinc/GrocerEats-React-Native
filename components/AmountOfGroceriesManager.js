@@ -10,7 +10,7 @@ const AmountOfGroceriesManager = ({textInputRef, amount, setAmount, selectedUnit
     const [tabOfUnits, setTabOfUnits] = useState([{ label: "No Unit", value: "" }, { label: 'g', value: 'g' }]);
 
     useEffect(() => {
-        //Because picker does not allow creating dynamic list inside of its body the unit list must be created seperatly
+        //Because picker does not allow creating dynamic list inside of its body the unit list must be created separately
 
         setTabOfUnits([{ label: "No unit", value: "" }]);
         if (currentProduct.unitMain.length > 0) {
@@ -19,7 +19,7 @@ const AmountOfGroceriesManager = ({textInputRef, amount, setAmount, selectedUnit
         if (currentProduct.unitMain.toLowerCase() !== currentProduct.unitSecondary.toLowerCase() && currentProduct.unitSecondary.length > 0) {
             setTabOfUnits(prev => [...prev, { label: currentProduct.unitSecondary, value: currentProduct.unitSecondary }])
         }
-        //Beside units got from server there is option to add ingradient to list in standard weight units
+        //Beside units got from server there is option to add ingredient to list in standard weight units
         if (currentProduct.unitMain !== 'g' && currentProduct.unitSecondary !== 'g') {
             setTabOfUnits(prev => [...prev, { label: 'g', value: 'g' }])
         }
@@ -31,7 +31,7 @@ const AmountOfGroceriesManager = ({textInputRef, amount, setAmount, selectedUnit
         }
 
     }, [])
-    const setTextinputText = (text) => {
+    const setTextInputText = (text) => {
         setAmount(text.toString())
     }
 
@@ -42,7 +42,7 @@ const AmountOfGroceriesManager = ({textInputRef, amount, setAmount, selectedUnit
             setAmount('1')
         }
     }
-    const substractOneFromAmount = () => {
+    const subtractOneFromAmount = () => {
         if (amount.length > 0 && parseInt(amount) > 0 && parseInt(amount).toString() !== 'NaN') {
             setAmount(prev => (parseInt(prev) - 1).toString())
         } else {
@@ -77,7 +77,7 @@ const AmountOfGroceriesManager = ({textInputRef, amount, setAmount, selectedUnit
                 </TouchableOpacity>
             </View>
             <View style={styles.amountButtonsContainer}>
-                <TouchableOpacity style={styles.touchableButton} onPress={substractOneFromAmount}>
+                <TouchableOpacity style={styles.touchableButton} onPress={subtractOneFromAmount}>
                     <View style={styles.insideOfButton}>
                         <AntDesign name="minus" size={normalizeIconSize(18)} />
                     </View>
@@ -85,7 +85,7 @@ const AmountOfGroceriesManager = ({textInputRef, amount, setAmount, selectedUnit
                 <View style={styles.amountWithUnitContainer}>
 
                     <TextInput style={styles.amountTextInput} maxLength={6} keyboardType='numeric' value={amount}
-                        onChangeText={setTextinputText} onSubmitEditing={addToGroceryList} ref={textInputRef} />
+                        onChangeText={setTextInputText} onSubmitEditing={addToGroceryList} ref={textInputRef} />
 
                     <DefaultText style={styles.unitLabel}> {selectedUnit}</DefaultText>
 
